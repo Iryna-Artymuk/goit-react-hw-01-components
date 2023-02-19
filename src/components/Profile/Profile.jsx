@@ -1,17 +1,20 @@
 import PropTypes from 'prop-types';
+import { StyledWrapper } from '../Common/CommonStyle';
+import { StyledStatsInfo, StyledImg, UserInfo } from './Profile.styled';
 export default function User(props) {
   const { username, tag, location, avatar, stats } = props.userInfo;
 
   return (
-    <div>
-      <div>
-        <img src={avatar} alt="User avatar" />
+    <StyledWrapper>
+      <StyledImg src={avatar} alt="User avatar" />
+
+      <UserInfo>
         <p> {username}</p>
         <p>{tag}</p>
         <p>{location}</p>
-      </div>
+      </UserInfo>
 
-      <ul>
+      <StyledStatsInfo>
         <li>
           <span>Followers</span>
           <span>{stats.followers}</span>
@@ -24,14 +27,20 @@ export default function User(props) {
           <span>Likes</span>
           <span>{stats.likes}</span>
         </li>
-      </ul>
-    </div>
+      </StyledStatsInfo>
+    </StyledWrapper>
   );
 }
 User.propTypes = {
-  username: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-  stats: PropTypes.objectOf(PropTypes.number).isRequired,
+  userInfo: PropTypes.shape({
+    username: PropTypes.string,
+    tag: PropTypes.string,
+    location: PropTypes.string,
+    avatar: PropTypes.string,
+    stats: PropTypes.shape({
+      followers: PropTypes.number,
+      views: PropTypes.number,
+      likes: PropTypes.number,
+    }),
+  }).isRequired,
 };

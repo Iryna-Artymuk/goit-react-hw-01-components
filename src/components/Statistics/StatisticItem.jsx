@@ -1,21 +1,13 @@
 import PropTypes from 'prop-types';
+import { StyledInfo } from './Statistics.styled';
 export default function StaticticItem(props) {
-  const { label, percentage, id } = props;
+  const { label, percentage } = props;
   return (
-    <li key={id}>
-      <div
-        style={{
-          border: '1px solid red',
-          padding: 10,
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 10,
-          alignItems: 'center',
-        }}
-      >
-        <span>{label}</span>
+    <li>
+      <StyledInfo type={label}>
+        <span> {label}</span>
         <span>{percentage}%</span>
-      </div>
+      </StyledInfo>
     </li>
   );
 }

@@ -1,26 +1,33 @@
 import userInfo from '../Data/user.json';
 import StatisticData from '../Data/data.json';
 import friendsData from '../Data/friends.json';
+import transactionsData from '../Data/transactions.json';
 import User from '../components/Profile/Profile';
 import Statistics from './Statistics/StatisticsList';
 import FriendList from './FriendList/FriendList';
+import Transactions from './Transaction/Transactions';
+import { Global } from '@emotion/react';
+import { emotionReset } from '../components/Global/GlobalStyled';
+import { Cart, Layout, ContentWrapper } from './Layout/Layout.styled';
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      <User userInfo={userInfo}></User>
-
-      <Statistics stats={StatisticData} title="Upload stats"></Statistics>
-
-      <FriendList friendsData={friendsData}></FriendList>
-    </div>
+    <Layout>
+      <Global styles={emotionReset} />
+      <ContentWrapper>
+        <Cart>
+          <User userInfo={userInfo}></User>
+        </Cart>
+        <Cart>
+          <Statistics stats={StatisticData} title="Upload stats"></Statistics>
+        </Cart>
+        <Cart>
+          {' '}
+          <FriendList friendsData={friendsData}></FriendList>
+        </Cart>
+        <Cart>
+          <Transactions transactionsData={transactionsData}></Transactions>
+        </Cart>
+      </ContentWrapper>
+    </Layout>
   );
 };

@@ -4,7 +4,7 @@ export default function FriendList({ friendsData }) {
     <ul>
       {friendsData.map(friend => (
         <ItemFriend
-          id={friend.id}
+          key={friend.id}
           avatar={friend.avatar}
           name={friend.name}
           onLineStatus={friend.isOnline}

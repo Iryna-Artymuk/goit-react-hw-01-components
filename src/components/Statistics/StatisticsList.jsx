@@ -1,21 +1,24 @@
 import StaticticItem from './StatisticItem';
 import PropTypes from 'prop-types';
+import { StyledWrapper } from '../Common/CommonStyle';
+import { StyledList, StyledTitle } from './Statistics.styled';
 export default function Statistics(props) {
   const { stats, title } = props;
   return (
-    <div>
-      <h2>{title}</h2>
+    <StyledWrapper>
+      <StyledTitle>{title}</StyledTitle>
 
-      <ul>
+      <StyledList>
         {stats.map(item => (
           <StaticticItem
+            key={item.id}
             label={item.label}
             percentage={item.percentage}
             id={item.id}
           ></StaticticItem>
         ))}
-      </ul>
-    </div>
+      </StyledList>
+    </StyledWrapper>
   );
 }
 Statistics.propTypes = {
