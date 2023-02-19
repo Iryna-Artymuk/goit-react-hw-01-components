@@ -5,6 +5,7 @@ const Layout = styled.div`
 const ContentWrapper = styled.div`
   display: flex;
   width: 1100px;
+  height: 100%;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;

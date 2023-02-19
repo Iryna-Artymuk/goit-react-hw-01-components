@@ -1,15 +1,21 @@
-import ItemFriend from './ItemFriend';
+import { StyledList, StyledListItem } from './FriendListStyled';
+
 export default function FriendList({ friendsData }) {
+  console.log(friendsData);
   return (
-    <ul>
+    <StyledList>
       {friendsData.map(friend => (
-        <ItemFriend
-          key={friend.id}
-          avatar={friend.avatar}
-          name={friend.name}
-          onLineStatus={friend.isOnline}
-        ></ItemFriend>
+        <StyledListItem key={friend.id}>
+          <span
+            style={{
+              backgroundColor: friend.isOnline ? 'green' : 'red',
+            }}
+          ></span>
+
+          <img src={friend.avatar} alt="User avatar" width="48" />
+          <p> {friend.name}</p>
+        </StyledListItem>
       ))}
-    </ul>
+    </StyledList>
   );
 }
