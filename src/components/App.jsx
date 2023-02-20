@@ -5,7 +5,7 @@ import transactionsData from '../Data/transactions.json';
 import User from '../components/Profile/Profile';
 import Statistics from './Statistics/StatisticsList';
 import FriendList from './FriendList/FriendList';
-import Transactions from './Transaction/Transactions';
+import TransactionsList from './Transaction/TransactionsList';
 import { Global } from '@emotion/react';
 import { emotionReset } from '../components/Global/GlobalStyled';
 import { Cart, Layout, ContentWrapper } from './Layout/Layout.styled';
@@ -21,11 +21,12 @@ export const App = () => {
           <Statistics stats={StatisticData} title="Upload stats"></Statistics>
         </Cart>
         <Cart>
-          {' '}
           <FriendList friendsData={friendsData}></FriendList>
         </Cart>
         <Cart>
-          <Transactions transactionsData={transactionsData}></Transactions>
+          <TransactionsList
+            transactionsData={transactionsData}
+          ></TransactionsList>
         </Cart>
       </ContentWrapper>
     </Layout>

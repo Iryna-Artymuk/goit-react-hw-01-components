@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import OneTransaction from './OneTransaction';
+import Transaction from './TransactionItem';
 import { Thead, Tbody, StyledHead, StyledTable } from './TransactionStyled';
 import { StyledWrapper } from '../Common/CommonStyle';
 export default function Transactions({ transactionsData }) {
@@ -15,12 +15,12 @@ export default function Transactions({ transactionsData }) {
         </Thead>
         <Tbody>
           {transactionsData.map(info => (
-            <OneTransaction
+            <Transaction
               key={info.id}
               type={info.type}
               amount={info.amount}
               currency={info.currency}
-            ></OneTransaction>
+            ></Transaction>
           ))}
         </Tbody>
       </StyledTable>

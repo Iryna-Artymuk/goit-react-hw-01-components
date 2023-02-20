@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { StyledData } from './TransactionStyled';
-export default function OneTransaction(OneTransactionInfo) {
+export default function Transaction(OneTransactionInfo) {
   const { currency, amount, type } = OneTransactionInfo;
 
   return (
@@ -11,7 +11,7 @@ export default function OneTransaction(OneTransactionInfo) {
     </tr>
   );
 }
-OneTransaction.propTypes = {
+Transaction.propTypes = {
   OneTransactionInfo: PropTypes.shape({
     type: PropTypes.string,
     amount: PropTypes.string,
