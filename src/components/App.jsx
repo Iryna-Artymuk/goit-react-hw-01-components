@@ -8,26 +8,21 @@ import FriendList from './FriendList/FriendList';
 import TransactionsList from './Transaction/TransactionsList';
 import { Global } from '@emotion/react';
 import { emotionReset } from '../components/Global/GlobalStyled';
-import { Cart, Layout, ContentWrapper } from './Layout/Layout.styled';
+import { Layout, ContentWrapper } from './Layout/Layout.styled';
 export const App = () => {
   return (
     <Layout>
       <Global styles={emotionReset} />
       <ContentWrapper>
-        <Cart>
-          <User userInfo={userInfo}></User>
-        </Cart>
-        <Cart>
-          <Statistics stats={StatisticData} title="Upload stats"></Statistics>
-        </Cart>
-        <Cart>
-          <FriendList friendsData={friendsData}></FriendList>
-        </Cart>
-        <Cart>
-          <TransactionsList
-            transactionsData={transactionsData}
-          ></TransactionsList>
-        </Cart>
+        <User userInfo={userInfo}></User>
+
+        <Statistics stats={StatisticData} title="Upload stats"></Statistics>
+
+        <FriendList friendsData={friendsData}></FriendList>
+
+        <TransactionsList
+          transactionsData={transactionsData}
+        ></TransactionsList>
       </ContentWrapper>
     </Layout>
   );

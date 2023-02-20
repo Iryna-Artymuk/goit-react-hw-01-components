@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Transaction from './TransactionItem';
 import { Thead, Tbody, StyledHead, StyledTable } from './TransactionStyled';
-import { StyledWrapper } from '../Common/CommonStyle';
+import { StyledWrapper } from '../Layout/Layout.styled';
 export default function Transactions({ transactionsData }) {
   return (
     <StyledWrapper>

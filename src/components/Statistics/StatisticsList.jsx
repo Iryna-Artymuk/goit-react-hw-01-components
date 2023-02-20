@@ -1,7 +1,8 @@
 import StaticticItem from './StatisticItem';
 import PropTypes from 'prop-types';
-import { StyledWrapper } from '../Common/CommonStyle';
+
 import { StyledList, StyledTitle } from './Statistics.styled';
+import { StyledWrapper } from '../Layout/Layout.styled';
 export default function Statistics(props) {
   const { stats, title } = props;
   if (title)

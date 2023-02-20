@@ -6,6 +6,14 @@ const StyledList = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  width: 500px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 20px;
+  background: wheat;
 `;
 
 const StyledListItem = styled.li`

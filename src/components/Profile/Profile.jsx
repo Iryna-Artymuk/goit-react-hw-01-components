@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import photo from '../Profile/photo.jpg';
-import { StyledWrapper } from '../Common/CommonStyle';
-import { StyledStatsInfo, StyledImg, UserInfo } from './Profile.styled';
 
+import { StyledStatsInfo, StyledImg, UserInfo } from './Profile.styled';
+import { StyledWrapper } from '../Layout/Layout.styled';
 export default function User(props) {
   const { username, tag, location, stats } = props.userInfo;
 
