@@ -7,7 +7,6 @@ export default function FriendItem({ avatar, name, status }) {
         <span
           style={{
             backgroundColor: status ? 'green' : 'red',
-
             display: 'block',
           }}
         ></span>
