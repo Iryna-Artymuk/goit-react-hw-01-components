@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import { StyledRow, StyledData } from './TransactionStyled';
+import { StyledData } from './TransactionStyled';
 export default function OneTransaction(OneTransactionInfo) {
   const { currency, amount, type } = OneTransactionInfo;
 
   return (
-    <StyledRow>
+    <tr>
       <StyledData type={type}>{type}</StyledData>
       <StyledData type={type}>{amount}</StyledData>
       <StyledData type={type}>{currency}</StyledData>
-    </StyledRow>
+    </tr>
   );
 }
 OneTransaction.propTypes = {

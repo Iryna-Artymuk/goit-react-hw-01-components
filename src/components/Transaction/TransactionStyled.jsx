@@ -4,24 +4,26 @@ const StyledTable = styled.table`
   width: 100%;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
 `;
-const StyledRow = styled.tr`
-  width: 100%;
-  height: 20px;
-  padding: 5px;
+
+const Thead = styled.thead`
+  tr {
+    padding: 25px;
+    background-color: pink;
+  }
 `;
 const StyledHead = styled.th`
-  height: 30px;
+  height: 40px;
   text-align: left;
 `;
 
 const Tbody = styled.tbody`
   tr:nth-of-type(odd) {
-    background-color: #f6e9cd;
+    background-color: pink;
   }
 `;
 
 const StyledData = styled.td`
-  padding: 5 px;
+  padding: 5px;
   text-align: left;
   color: ${props => {
     console.log(props.type);
@@ -38,4 +40,4 @@ const StyledData = styled.td`
     }
   }};
 `;
-export { StyledRow, Tbody, StyledData, StyledHead, StyledTable };
+export { Thead, Tbody, StyledData, StyledHead, StyledTable };

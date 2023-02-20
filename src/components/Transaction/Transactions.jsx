@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
 import OneTransaction from './OneTransaction';
-import { StyledRow, Tbody, StyledHead, StyledTable } from './TransactionStyled';
+import { Thead, Tbody, StyledHead, StyledTable } from './TransactionStyled';
 import { StyledWrapper } from '../Common/CommonStyle';
 export default function Transactions({ transactionsData }) {
   return (
     <StyledWrapper>
       <StyledTable>
-        <thead>
-          <StyledRow>
+        <Thead>
+          <tr>
             <StyledHead>Type</StyledHead>
             <StyledHead>Amount</StyledHead>
             <StyledHead>Currency</StyledHead>
-          </StyledRow>
-        </thead>
+          </tr>
+        </Thead>
         <Tbody>
           {transactionsData.map(info => (
             <OneTransaction
