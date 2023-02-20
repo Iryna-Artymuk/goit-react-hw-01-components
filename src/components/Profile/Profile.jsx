@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+import photo from '../Profile/photo.jpg';
 import { StyledWrapper } from '../Common/CommonStyle';
 import { StyledStatsInfo, StyledImg, UserInfo } from './Profile.styled';
 
@@ -8,7 +8,7 @@ export default function User(props) {
 
   return (
     <StyledWrapper>
-      <StyledImg src={avatar} alt="User avatar" />
+      <StyledImg src={photo} alt="User avatar" />
 
       <UserInfo>
         <p> {username}</p>
