@@ -31,19 +31,19 @@ const ContentWrapper = styled.div`
 // `;
 
 const StyledWrapper = styled.div`
-  height: 100%;
+  width: 500px;
+  height: 600px;
+
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  text-align: center;
 
-  width: 500px;
-  height: 600px;
-  overflow: hidden;
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
-  text-align: center;
-  padding: 20px;
+
   background: wheat;
 `;
 export { StyledWrapper, Layout, ContentWrapper };
