@@ -16,7 +16,7 @@ const StyledList = styled.ul`
   background: wheat;
 `;
 
-const StyledListItem = styled.li`
+const StyledInfo = styled.div`
   width: 250px;
   padding: 20px 30px;
   border-radius: 5px;
@@ -43,4 +43,4 @@ const StyledListItem = styled.li`
   }
 `;
 
-export { StyledListItem, StyledList };
+export { StyledInfo, StyledList };

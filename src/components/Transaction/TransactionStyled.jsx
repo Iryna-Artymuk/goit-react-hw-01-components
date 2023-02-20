@@ -26,7 +26,6 @@ const StyledData = styled.td`
   padding: 5px;
   text-align: left;
   color: ${props => {
-    console.log(props.type);
     if (props.type === 'withdrawal') {
       return 'red';
     }

@@ -2,5 +2,9 @@
   "compilerOptions": {
     "baseUrl": "src"
   },
-  "include": ["src", "src/components/Transaction/TransactionItem.jsx"]
+  "include": [
+    "src",
+    "src/components/Transaction/TransactionItem.jsx",
+    "src/components/Layout/Layout.styled.jsx"
+  ]
 }
