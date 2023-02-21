@@ -3,6 +3,7 @@ import photo from '../Profile/photo.jpg';
 
 import { StyledStatsInfo, StyledImg, UserInfo } from './Profile.styled';
 import { StyledWrapper } from '../Layout/Layout.styled';
+
 export default function User(props) {
   const { username, tag, location, stats } = props.userInfo;
 

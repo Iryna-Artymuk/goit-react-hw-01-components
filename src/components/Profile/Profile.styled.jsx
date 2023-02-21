@@ -33,7 +33,7 @@ const StyledStatsInfo = styled.ul`
   flex-direction: column;
   gap: 5px;
   padding: 5px;
-  margin-top: 30px;
+
   align-items: center;
 
   font-size: 24px;

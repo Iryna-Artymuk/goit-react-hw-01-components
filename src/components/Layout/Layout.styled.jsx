@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/css';
+
 const Layout = styled.div`
   padding: 20px;
 `;
